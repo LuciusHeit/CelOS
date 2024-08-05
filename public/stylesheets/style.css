@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+body {
+  padding: 50px;
+  background-color: #161a1b;
+  color: #e1e1e1;
+  font-family: "Kode Mono", monospace;
+  text-decoration-color: white;
+  transition: all 1s;
+}
+body.lightmode{
+  background-color: azure;
+  color: #101213;
+  transition: all 1s;
+}
+
+h1.title {
+  color: #d4b313;
+  text-align: center;
+  text-decoration: underline;
+  transition: all 1s;
+}
+.logo {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logotext{
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #d48d13;
+}
+.logotext span {
+  font-size: 3rem;
+  padding: 0 10px;
+  text-transform: uppercase;
+  color: inherit;
+}
+.logotext.animate span {
+  animation: zoomup 3s linear infinite;
+  animation-delay: calc(300ms * var(--i));
+}
+@keyframes zoomup {
+  0%,
+  100% {
+    color: #d48d13;
+    filter: blur(1px);
+    text-shadow: 0 0 10px #d48d13, 0 0 20px #d48d13, 0 0 30px #d48d13,
+    0 0 40px #d48d13, 0 0 60px #d48d13, 0 0 80px #d48d13, 0 0 100px #d48d13,
+    0 0 120px #d48d13;
+  }
+  5%,
+  95% {
+    filter: blur(0);
+    color: inherit;
+    text-shadow: none;
+  }
+}
+
+.screen{
+  width: 100%;
+  height: 0;
+  object-fit: contain;
+  transition: all 1s;
+}
+.screen-2{
+  padding-top: 3px;
+  height: auto;
+  transition: all 1s;
+}
+.screen-3{
+  border: 1px solid white;
+}
+
+body.lightmode h1 {
+  text-decoration: underline black;
+  transition: all 1s;
+}
+
+body.lightmode .termino-input {
+  background-color: #e1e1e1;
+  color: black;
+  text-decoration-color: black;
+  transition: all 1s;
+}
+
+.button{
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+#process {
+  font-weight: bold;
+}
+#user {
+  font-style: italic ;
+}
+.guest{
+  opacity: 60%;
+}
+
+#terminal {
+  max-width: 100%;
+  display: block;
+  word-break: break-word;
+  max-height: 70vh;
+  overflow: scroll;
+}
+
+code > * {
+  white-space: pre-line;
+}
+
+.termino-input {
+  width: 100%;
+  background-color: #101213;
+  color: white;
+  border: none;
+  resize: none;
+  transition: all 1s;
+}
+.termino-input:focus{
+  outline: none;
+}
+.censorship{
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  transition: none;
+}
+
+span#lightmode{
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+span#lightmode:hover{
+  font-weight: bolder;
+  transition: all 0.5s;
+}
+
+
+@media only screen and (max-width : 800px) {
+
+  body{
+    padding: 15px;
+  }
+  #terminal > *{
+    width: 95%;
+    margin: auto;
+  }
+
+}
+
+
+.loading:after {
+  content: '.';
+  animation: dots 1s steps(5, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% {
+    color: rgba(0,0,0,0);
+    text-shadow:
+            .25em 0 0 rgba(0,0,0,0),
+            .5em 0 0 rgba(0,0,0,0);}
+  40% {
+    color: white;
+    text-shadow:
+            .25em 0 0 rgba(0,0,0,0),
+            .5em 0 0 rgba(0,0,0,0);}
+  60% {
+    text-shadow:
+            .25em 0 0 white,
+            .5em 0 0 rgba(0,0,0,0);}
+  80%, 100% {
+    text-shadow:
+            .25em 0 0 white,
+            .5em 0 0 white;}}

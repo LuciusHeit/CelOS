@@ -1,0 +1,16 @@
+{
+  "name": "soleos",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start-dev": "NODE_ENV=development BACKEND_URL=http://localhost:8080 DEBUG=celos:* node ./bin/www",
+    "start-prod": "NODE_ENV=production node ./bin/www"
+  },
+  "dependencies": {
+    "debug": "4.3.5",
+    "express": "~4.19.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "3.0.3"
+  }
+}

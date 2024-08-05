@@ -1,0 +1,26 @@
+extends layout
+
+
+block content
+  .logo
+    .logotext.animate
+      span(style='--i:1') c
+      span(style='--i:2') e
+      span(style='--i:3') l
+      span(style='--i:4') o
+      span(style='--i:5') s
+
+  div Utente:&nbsp
+    span#user.guest Guest
+  div Processo:&nbsp
+    span#process Menù Principale
+
+  canvas#screen(class="screen")
+  div#terminal(class = hiddenterminal ? 'hidden' : '')
+    pre
+      code(class="termino-console")
+    textarea(class="termino-input", rows="1", wrap="hard", placeholder="Digita qui", autofocus=true, id="termino-input")
+  script.
+    backend="#{backend}";
+  script(src='javascripts/terminal.js', type='module').
+
